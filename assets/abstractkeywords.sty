@@ -1,0 +1,41 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{assets/abstractkeywords}[2015/05/20 Abstract and Keyword Page]
+
+%% Require cnabstract, cnkeyword, enabstract, enkeywords.
+\RequirePackage{abstract}
+\usepackage{fontspec}
+\setmainfont{Times New Roman} 
+
+\newcommand*{\cnabstractkeywords}[2]{
+  \def\@cnabstract{#1}
+  \def\@cnkeywords{#2}
+}
+
+\newcommand*{\enabstractkeywords}[2]{
+  \def\@enabstract{#1}
+  \def\@enkeywords{#2}
+}
+
+\newcommand*{\makeabstract}{
+  \newpage
+  \pagenumbering{Roman}
+  \ifdefined\@cnabstract{
+    \renewcommand\abstractname{\zihao{3}{\heiti{摘\ \ 要}}}\par
+    \begin{abstract}
+      \zihao{-4}{\songti{\@cnabstract}}\par
+      \zihao{-4}{\heiti{\noindent{\\关键词：\songti{\@cnkeywords}}}}
+    \end{abstract}
+    \vspace{5mm}
+    \newpage
+  }
+  \fi
+  \ifdefined\@enabstract{
+    \renewcommand\abstractname{\zihao{3}{\textbf{ABSTRACT}}}\par
+    \begin{abstract}
+      \zihao{-4}{{\noindent \@enabstract}}\par
+      \zihao{-4}{{\noindent \textbf{\\Keywords:\@enkeywords}}}
+    \end{abstract}
+  }
+  \fi
+  \newpage
+}

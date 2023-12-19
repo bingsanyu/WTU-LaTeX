@@ -1,0 +1,103 @@
+\documentclass[zihao = -4,cn]{oucart}
+
+\title{论文标题}
+\entitle{The Title of the Thesis}
+\author{作者名}
+\advisor{指导教师名}
+\department{学院名}{专业年级}
+
+\cnabstractkeywords{
+ 这是中文摘要。 
+}{
+中文； 关键字
+}
+\enabstractkeywords{
+  This is an English abstract. 
+}{
+  English; Abstract
+}
+
+\begin{document}
+	
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[C]{武汉纺织大学2024届毕业设计论文}
+
+\makecover
+
+% \makesignature
+
+\makeabstract
+
+
+\begin{spacing}{1.75}
+\tableofcontents
+\end{spacing}
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1} 
+% 正文内容
+% 建议使用 \input{<文件名>} 指令引用其他文件
+\section{示例章节}
+\subsection{示例章节}
+\subsubsection{示例章节}
+武汉纺织大学位于中国湖北省武汉市，现有南湖校区（老校区，位于鲁巷纺织路一号）、阳光校区（主校区，2004年开始招生）、东湖校区（湖北财经高等专科学校）三大校区，占地面积2400余亩，建筑面积70多万平方米。学科覆盖了工学、理学、哲学、文学、管理学、经济学、法学和教育学八个学科门类，以纺织服装为特色，42个本科专业，现在有校本科生、研究生一共14000余人\cite{wiki:xxx}. 
+\section{测试章节}
+测试图片：
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=5cm]{figures/wtulogo}
+    \caption{武汉纺织大学}
+    \label{fig:ouc1}
+\end{figure}
+
+测试表格：
+\begin{table}[!htbp]
+\centering
+\caption{一个基本的三线表}
+\begin{minipage}[t]{350pt}
+\begin{tabular*}{350pt}{@{\extracolsep{\fill}}ccc}
+\toprule
+第一列 & 第二列 & 第三列 \\
+\midrule
+文字 & English & $\alpha^*$ \\
+文字 & English & $\beta$ \\
+文字 & English & $\gamma$\\
+\bottomrule
+\end{tabular*}
+\footnotesize
+数据来源：相关的数据来源。 \\
+$*$：表中需要解释的内容
+\end{minipage}
+\end{table}
+
+测试公式：
+\begin{equation}
+ \lim_{x\to 0}{\frac{e^x-1}{2x}}
+ \overset{\left[\frac{0}{0}\right]}{\underset{\mathrm{H}}{=}}
+ \lim_{x\to 0}{\frac{e^x}{2}}={\frac{1}{2}}
+\end{equation}
+\newpage
+
+%\bibliographystyle{unsrt}
+\bibliography{main}
+
+\newpage
+
+
+\begin{center}
+\zihao{3} \textbf{附\ \ 录} \\
+\end{center}
+\lstinputlisting[
+style       =   Python,
+caption     =   {\bf ff.py},
+label       =   {ff.py}
+]{codes/code1.py}
+
+\newpage
+\begin{center}
+	\zihao{3} \textbf{致\ \ 谢} \\
+\end{center}
+
+\end{document}

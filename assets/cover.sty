@@ -1,0 +1,29 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{assets/cover}[2015/05/20 Cover Page]
+
+%% Require title, author, studentid, advisor, college, department. 
+
+\newcommand*{\makecover}{
+  \begin{titlepage}
+    \begin{minipage}{25mm}
+      \centering\includegraphics{figures/wtulogo}
+    \end{minipage}
+    \center{\heiti\zihao{-1}{毕\ 业\ 设\ 计\ [\ 论\ 文\ ]}}
+
+
+    \vspace{15mm}
+    \center{\heiti\zihao{-2}{课题名称：\uline{\makebox[70mm]{\songti\@title}}}}
+
+
+    \vspace{25mm}
+    \begin{center}
+      \heiti\zihao{3}{姓\ \ \ \ \ \ \ \ 名：}\uline{\makebox[70mm]{\@author}}\par
+      \heiti\zihao{3}{学\ \ \ \ \ \ \ \ 院：}\uline{\makebox[70mm]{\@college}}\par
+	  \heiti\zihao{3}{班\ \ \ \ \ \ \ \ 级：}\uline{\makebox[70mm]{\@department}}\par
+      \heiti\zihao{3}{指导教师：}\uline{\makebox[70mm]{\@advisor}}\par
+      \heiti\zihao{3}{成绩评定：}\uline{\makebox[70mm] }\par
+      \heiti\zihao{3}{完成日期：}\uline{\makebox[70mm]{\today}}\par
+      \vspace{35mm}
+    \end{center}
+  \end{titlepage}
+}
