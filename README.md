@@ -1,6 +1,6 @@
 请注意：此项目是我熟悉LaTeX的实践，可能不适用现实情况。
 
-## 武汉纺织大学本科生毕业论文非官方LaTeX模版
+##武汉纺织大学本科生毕业论文非官方LaTeX模版
 
 [模版使用手册](https://github.com/OSOUC/UndergraduateThesisLaTeXTemplate/blob/master/manual.pdf) 
 
